@@ -1,0 +1,151 @@
+@import 'vars';
+
+
+
+.breadcrumbs {
+    background: #F8F3F4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: $colorSyte1;
+    }
+
+    &__items {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #636363;
+
+        .fontRed {
+            color: red;
+        }
+    }
+}
+
+.slide {
+    background: #F7F7F7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    background: #FFFFFF;
+}
+
+.customization {
+    border: 1px solid #EAEAEA;
+    max-width: 1140px;
+    max-height: 600px;
+    background: $colorSyte2;
+    display: grid;
+    justify-items: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    &__title {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: $colorSyte1;
+        margin-bottom: 12px;
+    }
+
+    &__line-top {
+        margin-bottom: 12px;
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        color: #4D4D4D;
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        width: 555px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #5E5E5E;
+        margin-bottom: 32px;
+    }
+
+    &__price {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: #EF5B70;
+        margin-bottom: 65px;
+    }
+
+    &__line-bottom {
+        margin-bottom: 65px;
+    }
+
+    &__choose {
+        display: flex;
+        gap: 22px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+        margin-bottom: 48px;
+
+        &_color {
+            display: flex;
+            gap: 9px;
+        }
+
+        &_size {
+            display: flex;
+            gap: 9px;
+        }
+
+        &_quantity {
+            display: flex;
+            gap: 9px;
+        }
+    }
+
+    .box {
+        border: 1px solid #FF6A6A;
+        width: 211px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+
+        &_vector {
+            margin-left: 24px;
+        }
+
+        &__text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #F26376;
+        }
+    }
+}
+
+.product {
+    margin-bottom: 128px;
+}
