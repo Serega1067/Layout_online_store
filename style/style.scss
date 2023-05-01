@@ -1,5 +1,18 @@
+@import 'product';
 @import 'catalog';
 @import 'vars';
+
+@mixin centerCalc($width) {
+    padding-left: calc(50% - $width);
+    padding-right: calc(50% - $width);
+}
+
+%flex-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
 * {
     margin: 0px;
@@ -19,17 +32,23 @@ img {
 }
 
 .center {
+    /*
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
+    */
+    @include centerCalc(570px);
 }
 
 .header {
     background: #222222;
+    /*
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    */
+    @extend %flex-center;
+    justify-content: space-between;
     padding-top: 18px;
     padding-bottom: 18px;
 
@@ -231,11 +250,14 @@ img {
         padding-top: 104px;
         padding-bottom: 104px;
         background: $colorBackground;
+        /*
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
         align-items: center;
+        */
+        @extend %flex-center;
+        justify-content: center;
         gap: 30px;
 
         &_item {
@@ -269,14 +291,17 @@ img {
     &__middle {
         padding-top: 86px;
         padding-bottom: 126px;
-        background-image: url(../img/footer__middle_photo.jpg);
+        background-image: url(../img/subscribe.svg);
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: auto 100%;
+        background-size: cover;
+        /*
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
+        */
+        @extend %flex-center;
         gap: 223px;
 
         &_item {
@@ -293,6 +318,10 @@ img {
             line-height: 24px;
             text-align: center;
             color: $colorBackground;
+        }
+
+        &_slogan-italic {
+            font-style: italic;
         }
 
         &_title {
@@ -363,10 +392,13 @@ img {
     }
 
     &__bottom {
+        /*
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
+        */
+        @extend %flex-center;
         justify-content: space-between;
         padding-top: 24px;
         padding-bottom: 24px;
@@ -389,8 +421,11 @@ img {
 
 @media (max-width: 1024px) {
     .center {
+        /*
         padding-left: calc(50% - 368px);
         padding-right: calc(50% - 368px);
+        */
+        @include centerCalc(368px);
     }
 
     .promo {
@@ -433,8 +468,11 @@ img {
 
 @media (max-width: 767px) {
     .center {
+        /*
         padding-left: calc(50% - 187px);
         padding-right: calc(50% - 187px);
+        */
+        @include centerCalc(187px);
     }
 
     .header {
