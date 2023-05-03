@@ -1,5 +1,6 @@
 @import 'product';
 @import 'catalog';
+@import 'shopping_cart';
 @import 'vars';
 
 @mixin centerCalc($width) {
@@ -39,6 +40,14 @@ img {
     @include centerCalc(570px);
 }
 
+ul {
+    list-style-type: none;
+}
+
+.box-content {
+    overflow: hidden;
+}
+
 .header {
     background: #222222;
     /*
@@ -56,12 +65,110 @@ img {
         display: flex;
         align-items: center;
         gap: 41px;
+
+        &_logo {
+            cursor: pointer;
+        }
+
+        &_search {
+            cursor: pointer;
+
+            &:hover path {
+                fill: $colorSyte1;
+            }
+        }
     }
 
     &__right {
         display: flex;
         align-items: center;
         gap: 33px;
+
+        &_burger {
+            &-item {
+                cursor: pointer;
+
+                &:hover path {
+                    fill: $colorSyte1;
+                }
+            }
+
+            &-nav {
+                position: absolute;
+                top: 78px;
+                right: 0px;
+                width: 232px;
+                background: $colorSyte2;
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                box-sizing: border-box;
+                padding: 37px 0px 16px 34px;
+                transition: right .4s;
+                z-index: 100;
+
+                &-title {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #000000;
+                }
+
+                &-subtitle {
+                    margin-bottom: 11px;
+                    margin-top: 20px;
+                }
+
+                &-head {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: $colorSyte1;
+                }
+
+                &-links {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+                    margin-bottom: 17px;
+                }
+
+                &-link {
+                    padding-left: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #6F6E6E;
+                }
+            }
+
+            #burger {
+                position: absolute;
+                left: 999999;
+                visibility: hidden;
+            }
+
+            #burger:checked~.header__right_burger-nav {
+                right: -232px;
+            }
+        }
+
+        &_account {
+            cursor: pointer;
+
+            &:hover path {
+                fill: $colorSyte1;
+            }
+        }
+
+        &_basket {
+            cursor: pointer;
+
+            &:hover path {
+                fill: $colorSyte1;
+            }
+        }
     }
 }
 
@@ -181,8 +288,21 @@ img {
     }
 
     &__item {
+        position: relative;
         background: #F8F8F8;
         width: 360px;
+
+        &_img {}
+
+        &_hover {
+            position: absolute;
+            left: 0px;
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
 
         &_content {
             display: grid;
