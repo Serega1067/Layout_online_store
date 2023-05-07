@@ -1,6 +1,7 @@
 @import 'product';
 @import 'catalog';
 @import 'shopping_cart';
+@import 'registration';
 @import 'vars';
 
 @mixin centerCalc($width) {
@@ -292,8 +293,6 @@ ul {
         background: #F8F8F8;
         width: 360px;
 
-        &_img {}
-
         &_hover {
             position: absolute;
             left: 0px;
@@ -347,20 +346,28 @@ ul {
     }
 
     .box {
-        margin-top: 48px;
-        margin-bottom: 96px;
         display: flex;
         justify-content: center;
+    }
 
-        &__text {
-            border: 1px solid #FF6A6A;
-            padding: 15px 38px;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            color: #F26376;
-        }
+    .box__text {
+        width: 211px;
+        margin-top: 48px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid #FF6A6A;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #F26376;
+    }
+
+    .box__text:hover {
+        background-color: $colorSyte1;
+        color: $colorSyte2;
     }
 }
 
@@ -394,6 +401,10 @@ ul {
             font-size: 19.96px;
             line-height: 24px;
             color: #FBFBFB;
+        }
+
+        &_heading:hover {
+            color: $colorSyte1;
         }
 
         &_text {
@@ -509,6 +520,11 @@ ul {
             text-align: center;
             color: $colorSyte2;
         }
+
+        .button:hover {
+            background: $colorSyte2;
+            color: $colorSyte1;
+        }
     }
 
     &__bottom {
@@ -527,6 +543,14 @@ ul {
         .contacts {
             display: flex;
             gap: 7px;
+
+            &__item:hover .bg {
+                fill: black;
+            }
+
+            &__item:hover .vector {
+                fill: white;
+            }
         }
 
         .signature {

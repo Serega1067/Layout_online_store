@@ -197,7 +197,9 @@ input {
 
             &_border {
                 margin-bottom: 17px + 16px;
-                border-bottom: 1px solid #E2E2E2;
+                background-color: #E2E2E2;
+                border: none;
+                height: 1px;
             }
 
             &_button {
