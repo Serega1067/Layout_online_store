@@ -8,6 +8,10 @@ input {
     padding-top: 69px;
     padding-bottom: 128px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 128px;
 
     &__cards {
@@ -15,7 +19,10 @@ input {
         display: grid;
         gap: 40px;
 
+
+
         &_item {
+            position: relative;
             display: flex;
             background: #FFFFFF;
             filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
@@ -44,6 +51,8 @@ input {
                     }
 
                     &-cross {
+                        position: absolute;
+                        right: 0;
                         margin-right: 22px;
                         border: none;
                         background-color: transparent;
@@ -171,7 +180,7 @@ input {
 
         &__checkout {
             background: #F5F3F3;
-            padding: 39px 43px 42px 44px;
+            padding: 42px 43px 52px 44px;
 
             &_sub-total {
                 display: flex;
@@ -215,6 +224,153 @@ input {
                 &:hover {
                     background-color: $colorSyte2;
                     color: $colorSyte1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .shopping {
+        flex-direction: column;
+        align-content: center;
+        gap: 64px;
+
+        &__cards {
+            width: 734px;
+        }
+
+        .purchase {
+            width: 734px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+
+            &__shipping {
+                width: 360px;
+            }
+
+            &__checkout {
+                margin-top: 39px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .breadcrumbs {
+        padding-top: 50px;
+        padding-bottom: 69px;
+    }
+
+    .shopping {
+        padding-top: 39px;
+        padding-bottom: 96px;
+        gap: 48px;
+
+        &__cards {
+            width: 358px;
+
+            &_item {
+                height: 188px;
+
+                .cards_info {
+                    width: 214px;
+                    padding-top: 14px;
+                    padding-left: 17px;
+                }
+
+                .cards_info-heading {
+                    margin-bottom: 26px;
+
+                    &-cross {
+                        margin-right: 12px;
+                    }
+                }
+
+                .cards_info-content-text,
+                .cards_info-content-price,
+                .cards_info-content-color,
+                .cards_info-content-size {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                .cards_info-content-input {
+                    margin-left: 15px;
+                    width: 24px;
+                    height: 15px;
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+
+                .cross_vector {
+                    width: 10px;
+                    height: 10px;
+                }
+
+                .cards_info-heading-text {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+
+            img {
+                max-width: 50%;
+            }
+        }
+
+        .shopping__buttons {
+            margin-top: 0;
+
+            .shopping__button {
+                padding: 9px 18px;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+
+        .purchase {
+            margin-top: 0;
+            flex-direction: column;
+            align-items: center;
+
+            &__shipping {
+                margin-bottom: 48px;
+            }
+
+            &__checkout {
+                margin-top: 0;
+
+                &_total {
+                    display: grid;
+                    justify-items: end;
+                }
+
+                &_sub-total {
+                    width: 108px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 400;
+                    font-size: 11px;
+                    line-height: 13px;
+                }
+
+                &_grand-total {
+                    width: 170px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 19px;
+
+                    &-color {
+                        color: $colorSyte1;
+                        font-weight: 700;
+                    }
                 }
             }
         }
