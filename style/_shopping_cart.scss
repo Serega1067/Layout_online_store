@@ -182,9 +182,15 @@ input {
             background: #F5F3F3;
             padding: 42px 43px 52px 44px;
 
+            &_total {
+                display: grid;
+                justify-items: end;
+            }
+
             &_sub-total {
+                width: 108px;
                 display: flex;
-                justify-content: flex-end;
+                justify-content: space-between;
                 margin-bottom: 12px;
                 font-style: normal;
                 font-weight: 400;
@@ -194,14 +200,20 @@ input {
             }
 
             &_grand-total {
+                width: 170px;
                 display: flex;
-                justify-content: flex-end;
+                justify-content: space-between;
                 margin-bottom: 21px;
                 font-style: normal;
                 font-weight: 300;
                 font-size: 16px;
                 line-height: 19px;
                 color: #222222;
+
+                &-color {
+                    font-weight: 700;
+                    color: $colorSyte1;
+                }
             }
 
             &_border {
@@ -251,6 +263,7 @@ input {
 
             &__shipping {
                 width: 360px;
+                margin-bottom: 0;
             }
 
             &__checkout {
@@ -345,24 +358,13 @@ input {
             &__checkout {
                 margin-top: 0;
 
-                &_total {
-                    display: grid;
-                    justify-items: end;
-                }
-
                 &_sub-total {
-                    width: 108px;
-                    display: flex;
-                    justify-content: space-between;
                     font-weight: 400;
                     font-size: 11px;
                     line-height: 13px;
                 }
 
                 &_grand-total {
-                    width: 170px;
-                    display: flex;
-                    justify-content: space-between;
                     font-weight: 300;
                     font-size: 16px;
                     line-height: 19px;

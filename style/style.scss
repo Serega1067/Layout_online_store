@@ -150,7 +150,7 @@ ul {
 
             #burger {
                 position: absolute;
-                left: 999999;
+                left: 999999px;
                 visibility: hidden;
             }
 
@@ -423,6 +423,7 @@ ul {
             font-size: 19.96px;
             line-height: 24px;
             color: #FBFBFB;
+            cursor: pointer;
         }
 
         &_heading:hover {
@@ -662,7 +663,7 @@ ul {
         padding-left: calc(50% - 187px);
         padding-right: calc(50% - 187px);
         */
-        @include centerCalc(187px);
+        @include centerCalc(180px);
     }
 
     .header {

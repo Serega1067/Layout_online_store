@@ -21,6 +21,7 @@ summary::-webkit-details-marker {
 
 .box-content {
   overflow: hidden;
+  position: relative;
 }
 
 .nav {
@@ -49,7 +50,7 @@ summary::-webkit-details-marker {
   gap: 320px;
   */
   display: flex;
-  padding-top: 51px;
+  padding-top: 38px;
   padding-bottom: 64px;
   position: relative;
   /*
@@ -67,8 +68,11 @@ summary::-webkit-details-marker {
   box-sizing: border-box;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 .filter-sort .filter__content {
+  position: absolute;
+  width: 328px;
   background-color: #FFFFFF;
   padding-top: 0;
   padding-right: 16px;
@@ -85,10 +89,15 @@ summary::-webkit-details-marker {
 .filter-sort .filter[open] path {
   fill: #F16D7F;
 }
+.filter-sort .filter[open] .filter__summary {
+  padding-top: 13px;
+  padding-left: 16px;
+}
 .filter-sort .filter__summary {
   display: flex;
   align-items: center;
   gap: 11px;
+  padding-top: 13px;
 }
 .filter-sort .filter__heading {
   font-style: normal;
@@ -109,6 +118,7 @@ summary::-webkit-details-marker {
   padding: 8px 11px 11px 11px;
   border-bottom: 1px solid #EBEBEB;
   border-left: 5px solid #EF5B70;
+  cursor: pointer;
 }
 .filter-sort .filter__item[open] .filter__heading-items {
   color: #F16D7F;
@@ -140,17 +150,21 @@ summary::-webkit-details-marker {
   line-height: 17px;
   color: #6F6E6E;
   */
+  padding-top: 13px;
   padding-left: 30px;
+  padding-right: 8px;
   display: flex;
   gap: 28px;
 }
 .filter-sort .sort__details {
   position: relative;
+  z-index: 1;
 }
 .filter-sort .sort__summary {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .filter-sort .sort__check {
   display: flex;
@@ -176,7 +190,7 @@ summary::-webkit-details-marker {
   left: -9px;
   top: 22px;
 }
-.filter-sort .sort__lable {
+.filter-sort .sort__label {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -245,6 +259,10 @@ summary::-webkit-details-marker {
   .filter__vector {
     width: 37.5px;
     height: 25px;
+    padding-left: 8px;
+  }
+  .filter[open] .filter__vector {
+    padding-left: 0;
   }
   .filter-sort {
     padding-top: 24px;
@@ -482,6 +500,7 @@ summary::-webkit-details-marker {
 
 .box-content {
   overflow: hidden;
+  position: relative;
 }
 
 .nav {
@@ -510,7 +529,7 @@ summary::-webkit-details-marker {
   gap: 320px;
   */
   display: flex;
-  padding-top: 51px;
+  padding-top: 38px;
   padding-bottom: 64px;
   position: relative;
   /*
@@ -528,8 +547,11 @@ summary::-webkit-details-marker {
   box-sizing: border-box;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 .filter-sort .filter__content {
+  position: absolute;
+  width: 328px;
   background-color: #FFFFFF;
   padding-top: 0;
   padding-right: 16px;
@@ -546,10 +568,15 @@ summary::-webkit-details-marker {
 .filter-sort .filter[open] path {
   fill: #F16D7F;
 }
+.filter-sort .filter[open] .filter__summary {
+  padding-top: 13px;
+  padding-left: 16px;
+}
 .filter-sort .filter__summary {
   display: flex;
   align-items: center;
   gap: 11px;
+  padding-top: 13px;
 }
 .filter-sort .filter__heading {
   font-style: normal;
@@ -570,6 +597,7 @@ summary::-webkit-details-marker {
   padding: 8px 11px 11px 11px;
   border-bottom: 1px solid #EBEBEB;
   border-left: 5px solid #EF5B70;
+  cursor: pointer;
 }
 .filter-sort .filter__item[open] .filter__heading-items {
   color: #F16D7F;
@@ -601,17 +629,21 @@ summary::-webkit-details-marker {
   line-height: 17px;
   color: #6F6E6E;
   */
+  padding-top: 13px;
   padding-left: 30px;
+  padding-right: 8px;
   display: flex;
   gap: 28px;
 }
 .filter-sort .sort__details {
   position: relative;
+  z-index: 1;
 }
 .filter-sort .sort__summary {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .filter-sort .sort__check {
   display: flex;
@@ -637,7 +669,7 @@ summary::-webkit-details-marker {
   left: -9px;
   top: 22px;
 }
-.filter-sort .sort__lable {
+.filter-sort .sort__label {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -706,6 +738,10 @@ summary::-webkit-details-marker {
   .filter__vector {
     width: 37.5px;
     height: 25px;
+    padding-left: 8px;
+  }
+  .filter[open] .filter__vector {
+    padding-left: 0;
   }
   .filter-sort {
     padding-top: 24px;
@@ -874,9 +910,14 @@ input {
   background: #F5F3F3;
   padding: 42px 43px 52px 44px;
 }
+.shopping .purchase__checkout_total {
+  display: grid;
+  justify-items: end;
+}
 .shopping .purchase__checkout_sub-total {
+  width: 108px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-bottom: 12px;
   font-style: normal;
   font-weight: 400;
@@ -885,14 +926,19 @@ input {
   color: #4A4A4A;
 }
 .shopping .purchase__checkout_grand-total {
+  width: 170px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-bottom: 21px;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
   color: #222222;
+}
+.shopping .purchase__checkout_grand-total-color {
+  font-weight: 700;
+  color: #F16D7F;
 }
 .shopping .purchase__checkout_border {
   margin-bottom: 33px;
@@ -935,6 +981,7 @@ input {
   }
   .shopping .purchase__shipping {
     width: 360px;
+    margin-bottom: 0;
   }
   .shopping .purchase__checkout {
     margin-top: 39px;
@@ -1011,22 +1058,12 @@ input {
   .shopping .purchase__checkout {
     margin-top: 0;
   }
-  .shopping .purchase__checkout_total {
-    display: grid;
-    justify-items: end;
-  }
   .shopping .purchase__checkout_sub-total {
-    width: 108px;
-    display: flex;
-    justify-content: space-between;
     font-weight: 400;
     font-size: 11px;
     line-height: 13px;
   }
   .shopping .purchase__checkout_grand-total {
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
     font-weight: 300;
     font-size: 16px;
     line-height: 19px;
@@ -1343,7 +1380,7 @@ ul {
 }
 .header__right_burger #burger {
   position: absolute;
-  left: 999999;
+  left: 999999px;
   visibility: hidden;
 }
 .header__right_burger #burger:checked ~ .header__right_burger-nav {
@@ -1576,6 +1613,7 @@ ul {
   font-size: 19.96px;
   line-height: 24px;
   color: #FBFBFB;
+  cursor: pointer;
 }
 .footer__top_heading:hover {
   color: #F16D7F;
@@ -1778,8 +1816,8 @@ ul {
     padding-left: calc(50% - 187px);
     padding-right: calc(50% - 187px);
     */
-    padding-left: calc(50% - 187px);
-    padding-right: calc(50% - 187px);
+    padding-left: calc(50% - 180px);
+    padding-right: calc(50% - 180px);
   }
   .header {
     padding-left: 16px;

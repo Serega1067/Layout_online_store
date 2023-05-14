@@ -24,6 +24,7 @@ summary::-webkit-details-marker {
 
 .box-content {
     overflow: hidden;
+    position: relative;
 }
 
 .nav {
@@ -54,7 +55,7 @@ summary::-webkit-details-marker {
     */
     display: flex;
     // height: 132px;
-    padding-top: 51px;
+    padding-top: 51px - 13px;
     padding-bottom: 64px;
     position: relative;
     /*
@@ -73,8 +74,11 @@ summary::-webkit-details-marker {
         box-sizing: border-box;
         position: relative;
         z-index: 1;
+        cursor: pointer;
 
         &__content {
+            position: absolute;
+            width: 328px;
             background-color: #FFFFFF;
             padding-top: 0;
             padding-right: 16px;
@@ -95,11 +99,16 @@ summary::-webkit-details-marker {
             fill: $colorSyte1;
         }
 
+        &[open] .filter__summary {
+            padding-top: 13px;
+            padding-left: 16px;
+        }
+
         &__summary {
             display: flex;
             align-items: center;
             gap: 11px;
-
+            padding-top: 13px;
         }
 
         &__heading {
@@ -123,6 +132,7 @@ summary::-webkit-details-marker {
             padding: 8px 11px 11px 11px;
             border-bottom: 1px solid #EBEBEB;
             border-left: 5px solid #EF5B70;
+            cursor: pointer;
         }
 
         &__item[open] .filter__heading-items {
@@ -161,18 +171,22 @@ summary::-webkit-details-marker {
         color: #6F6E6E;
         */
         // padding-top: 12px;
+        padding-top: 13px;
         padding-left: 30px;
+        padding-right: 8px;
         display: flex;
         gap: 28px;
 
         &__details {
             position: relative;
+            z-index: 1;
         }
 
         &__summary {
             display: flex;
             align-items: center;
             gap: 10px;
+            cursor: pointer;
         }
 
         &__check {
@@ -202,7 +216,7 @@ summary::-webkit-details-marker {
             top: 22px;
         }
 
-        &__lable {
+        &__label {
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -282,6 +296,11 @@ summary::-webkit-details-marker {
     .filter__vector {
         width: 37.5px;
         height: 25px;
+        padding-left: 8px;
+    }
+
+    .filter[open] .filter__vector {
+        padding-left: 0;
     }
 
     .filter-sort {
